@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CarePlus Clinic - Fictional modern healthcare and clinic landing page. Explore our medical services, meet our expert doctors, and schedule your appointment today.">
+    <title>CarePlus Clinic | Trusted Family Healthcare & Medical Services</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header & Responsive Navbar -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#home" class="logo" id="header-logo" aria-label="CarePlus Clinic Homepage">
+                <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v20M2 12h20" />
+                </svg>
+                <span class="logo-text">CarePlus<span>Clinic</span></span>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav"
+                aria-label="Toggle navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#why-choose-us" class="nav-link">Why Choose Us</a></li>
+                    <li><a href="#doctors" class="nav-link">Doctors</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#appointment" class="nav-cta-btn">Book Appointment</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        Your Trusted Health Partner
+                    </div>
+                    <h1 class="hero-title">Compassionate Care, Advanced Medicine, Closer to You.</h1>
+                    <p class="hero-desc">At CarePlus Clinic, we are dedicated to providing family-focused,
+                        patient-centered medical care. From routine health screenings to specialist diagnostics, our
+                        team is here for you.</p>
+                    <div class="hero-actions">
+                        <a href="#appointment" class="btn btn-primary" id="hero-primary-cta">Schedule Appointment</a>
+                        <a href="#services" class="btn btn-secondary" id="hero-secondary-cta">Explore Services</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">12+</span>
+                            <span class="stat-label">Years of Care</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">15k+</span>
+                            <span class="stat-label">Happy Patients</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">98%</span>
+                            <span class="stat-label">Satisfaction Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="image-wrapper">
+                        <img src="images/hero.jpg"
+                            alt="CarePlus Clinic clean reception lobby with helpful staff and welcoming waiting area"
+                            class="hero-img">
+                        <div class="hero-floating-card">
+                            <svg class="card-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            <div>
+                                <h4>Flexible Hours</h4>
+                                <p>Mon - Sat: 8AM - 6PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Waves Separator -->
+            <div class="hero-wave">
+                <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
+                    <path
+                        d="M0,32L120,42.7C240,53,480,75,720,74.7C960,75,1200,53,1320,42.7L1440,32L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z"
+                        fill="var(--bg-light)" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- About The Clinic Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container about-container">
+                <div class="about-visual">
+                    <div class="about-image-wrapper">
+                        <img src="images/about.jpg"
+                            alt="A friendly CarePlus physician consulting empathetically with an elderly patient"
+                            class="about-img">
+                        <div class="experience-badge">
+                            <span class="exp-num">12</span>
+                            <span class="exp-text">Years of<br>Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-subtitle">About Our Clinic</span>
+                    <h2 class="section-title">Providing Quality Clinical Care for a Healthier Tomorrow</h2>
+                    <p class="about-description">Founded in 2012, CarePlus Clinic has grown into a leading community
+                        healthcare facility. We believe that medical care should be compassionate, highly accessible,
+                        and personalized. Our modern space is designed to put you at ease, and our professional medical
+                        staff utilizes advanced diagnostics to deliver reliable clinical outcomes.</p>
+
+                    <h3 class="about-subtitle">Our Core Commitments</h3>
+                    <ul class="about-commitments-list">
+                        <li>
+                            <div class="commit-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Patient-Centered Focus:</strong> We treat the person, not just the symptoms.
+                                Your voice and comfort are our top priorities.
+                            </div>
+                        </li>
+                        <li>
+                            <div class="commit-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Integrity & Care Quality:</strong> We provide transparent diagnoses and
+                                treatment options rooted in evidence-based medicine.
+                            </div>
+                        </li>
+                        <li>
+                            <div class="commit-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Continuous Innovation:</strong> Regularly upgrading our equipment and clinical
+                                protocols to match the latest standards.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medical Services Section -->
+        <section id="services" class="services-section section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Our Specializations</span>
+                    <h2 class="section-title">Comprehensive Medical Services</h2>
+                    <p class="section-desc">CarePlus Clinic offers a wide array of outpatient clinical services to
+                        support your health journey at every life stage.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1: General Medicine -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg class="service-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                <polyline points="9 22 9 12 15 12 15 22" />
+                            </svg>
+                        </div>
+                        <h3>General Medicine</h3>
+                        <p>Comprehensive primary care, physical exams, preventative health advice, and chronic disease
+                            management for all family members.</p>
+                    </div>
+
+                    <!-- Service 2: Cardiology -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg class="service-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </div>
+                        <h3>Cardiology</h3>
+                        <p>Advanced cardiovascular health assessments, ECG screenings, blood pressure management, and
+                            heart condition diagnostics.</p>
+                    </div>
+
+                    <!-- Service 3: Pediatrics -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg class="service-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2a5 5 0 0 0-5 5v3a5 5 0 0 0 10 0V7a5 5 0 0 0-5-5z" />
+                                <path d="M17 14h-1.7a6 6 0 0 0-6.6 0H7a3 3 0 0 0-3 3v2h16v-2a3 3 0 0 0-3-3z" />
+                            </svg>
+                        </div>
+                        <h3>Pediatrics</h3>
+                        <p>Gentle and expert child healthcare, immunization programs, developmental milestones tracking,
+                            and pediatric checkups.</p>
+                    </div>
+
+                    <!-- Service 4: Dermatology -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg class="service-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M8 14c.6 1.3 1.9 2 4 2s3.4-.7 4-2" />
+                                <line x1="9" y1="9" x2="9.01" y2="9" />
+                                <line x1="15" y1="9" x2="15.01" y2="9" />
+                            </svg>
+                        </div>
+                        <h3>Dermatology</h3>
+                        <p>Expert evaluation of skin, hair, and nail health. Treatment for acne, eczema, mole mapping,
+                            and diagnostic skin biopsies.</p>
+                    </div>
+
+                    <!-- Service 5: Dental Care -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg class="service-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M4.5 10.5C3.5 12.5 3 14 3 16a5 5 0 0 0 10 0v-2.5m-8.5-3c1.5-2.5 4.5-4 7.5-4s6 1.5 7.5 4M19.5 10.5c1 2 1.5 3.5 1.5 5.5a5 5 0 0 1-10 0v-2.5" />
+                            </svg>
+                        </div>
+                        <h3>Dental Care</h3>
+                        <p>Preventative cleanings, routine checkups, root canal procedures, fillings, and cosmetic
+                            dentistry treatments for a bright smile.</p>
+                    </div>
+
+                    <!-- Service 6: Diagnostics -->
+                    <div class="service-card">
+                        <div class="service-icon-box">
+                            <svg class="service-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                <line x1="9" y1="3" x2="9" y2="21" />
+                                <line x1="15" y1="3" x2="15" y2="21" />
+                                <line x1="3" y1="9" x2="21" y2="9" />
+                                <line x1="3" y1="15" x2="21" y2="15" />
+                            </svg>
+                        </div>
+                        <h3>Diagnostics & Lab</h3>
+                        <p>On-site blood panels, rapid urinalysis, digital X-rays, ultra-fast lab reporting, and
+                            accurate diagnostic screening services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-choose-us" class="why-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Our Strengths</span>
+                    <h2 class="section-title">Why Choose CarePlus Clinic?</h2>
+                    <p class="section-desc">We combine medical expertise, compassionate patient relations, and a
+                        streamlined booking system to guarantee premium outpatient experiences.</p>
+                </div>
+
+                <div class="why-grid">
+                    <!-- Point 1 -->
+                    <div class="why-card">
+                        <div class="why-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h4>Experienced Professionals</h4>
+                        <p>Our board-certified physicians, clinical advisors, and nursing staff bring decades of
+                            collective clinical knowledge.</p>
+                    </div>
+
+                    <!-- Point 2 -->
+                    <div class="why-card">
+                        <div class="why-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <h4>Patient-Centered Care</h4>
+                        <p>We listen closely to your concerns, designing treatment plans that align with your unique
+                            history and goals.</p>
+                    </div>
+
+                    <!-- Point 3 -->
+                    <div class="why-card">
+                        <div class="why-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                                <line x1="6" y1="6" x2="6.01" y2="6" />
+                                <line x1="6" y1="18" x2="6.01" y2="18" />
+                            </svg>
+                        </div>
+                        <h4>Modern Facilities</h4>
+                        <p>We utilize digital workflows, modern medical equipment, and clinical devices to ensure safe
+                            and efficient checks.</p>
+                    </div>
+
+                    <!-- Point 4 -->
+                    <div class="why-card">
+                        <div class="why-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <h4>Easy Appointment Enquiry</h4>
+                        <p>Schedule visits instantly through our streamlined responsive web form, followed by rapid
+                            office confirmation.</p>
+                    </div>
+
+                    <!-- Point 5 -->
+                    <div class="why-card">
+                        <div class="why-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z" />
+                                <path d="M12 7v5l3 3" />
+                            </svg>
+                        </div>
+                        <h4>Comfortable Environment</h4>
+                        <p>Enjoy a warm, stress-free clinic setting. Friendly staff members ensure you feel welcomed
+                            throughout your visit.</p>
+                    </div>
+
+                    <!-- Point 6 -->
+                    <div class="why-card">
+                        <div class="why-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                        </div>
+                        <h4>Quality-Focused Service</h4>
+                        <p>We adhere to strict hygiene, patient confidentiality, and medical protocols to deliver
+                            superior primary healthcare.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctor Highlights Section -->
+        <section id="doctors" class="doctors-section section-padding bg-light">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Our Care Specialists</span>
+                    <h2 class="section-title">Meet Our Fictional Board-Certified Specialists</h2>
+                    <p class="section-desc">Get to know our leading clinical practitioners, dedicated to keeping your
+                        family healthy and active.</p>
+                </div>
+
+                <div class="doctors-grid">
+                    <!-- Doctor 1 -->
+                    <div class="doctor-card">
+                        <div class="doctor-img-box">
+                            <img src="images/doctor-jenkins.jpg"
+                                alt="Dr. Sarah Jenkins MD, CarePlus Chief of Cardiology smiling inside her office"
+                                class="doctor-img">
+                        </div>
+                        <div class="doctor-info">
+                            <span class="doctor-dept">Cardiology Department</span>
+                            <h3 class="doctor-name">Dr. Sarah Jenkins, MD</h3>
+                            <span class="doctor-exp">12+ Years Experience</span>
+                            <p class="doctor-desc">Specializes in preventative cardiology, hypertension management, and
+                                non-invasive cardiovascular ultrasound diagnostics.</p>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2 -->
+                    <div class="doctor-card">
+                        <div class="doctor-img-box">
+                            <img src="images/doctor-chen.jpg"
+                                alt="Dr. Marcus Chen MD, CarePlus Head of Pediatrics smiling warmly at his clinic desk"
+                                class="doctor-img">
+                        </div>
+                        <div class="doctor-info">
+                            <span class="doctor-dept">Pediatrics Department</span>
+                            <h3 class="doctor-name">Dr. Marcus Chen, MD</h3>
+                            <span class="doctor-exp">8+ Years Experience</span>
+                            <p class="doctor-desc">Dedicated to comprehensive primary care for children, childhood
+                                growth monitoring, and preventative health counseling.</p>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 3 -->
+                    <div class="doctor-card">
+                        <div class="doctor-img-box">
+                            <img src="images/doctor-rostova.jpg"
+                                alt="Dr. Elena Rostova MD, CarePlus Senior Dermatologist standing near her clinic display"
+                                class="doctor-img">
+                        </div>
+                        <div class="doctor-info">
+                            <span class="doctor-dept">Dermatology Department</span>
+                            <h3 class="doctor-name">Dr. Elena Rostova, MD</h3>
+                            <span class="doctor-exp">10+ Years Experience</span>
+                            <p class="doctor-desc">Experienced in clinical skin cancer screenings, acne treatments,
+                                chronic eczema care, and aesthetic dermatology advice.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Patient Testimonials Section -->
+        <section id="testimonials" class="testimonials-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Fictional Reviews</span>
+                    <h2 class="section-title">What Our Sample Patients Say</h2>
+                    <p class="section-desc">Please note that the following testimonials are purely fictional and created
+                        for demonstration/sample purposes.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="quote">"Dr. Jenkins was extremely thorough during my cardiovascular screening. The
+                            staff at the desk explained all fees transparently, and I was in and out with absolute peace
+                            of mind."</p>
+                        <div class="patient-meta">
+                            <div class="patient-avatar">JD</div>
+                            <div>
+                                <h4 class="patient-name">Jane D.</h4>
+                                <span class="patient-tag">Sample Patient Review</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="quote">"My kids love visiting Dr. Marcus Chen. He is incredibly patient, gentle, and
+                            explained the vaccinations so well that they weren't scared at all. The waiting area was
+                            very cozy too."</p>
+                        <div class="patient-meta">
+                            <div class="patient-avatar">RM</div>
+                            <div>
+                                <h4 class="patient-name">Robert M.</h4>
+                                <span class="patient-tag">Sample Patient Review</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                        </div>
+                        <p class="quote">"I had a persistent skin condition for months. Dr. Rostova diagnosed it
+                            accurately on the first appointment, and the treatment plan started showing improvements
+                            within a week."</p>
+                        <div class="patient-meta">
+                            <div class="patient-avatar">SL</div>
+                            <div>
+                                <h4 class="patient-name">Sofia L.</h4>
+                                <span class="patient-tag">Sample Patient Review</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment Enquiry Section -->
+        <section id="appointment" class="appointment-section section-padding bg-light">
+            <div class="container appointment-container">
+                <div class="appointment-card">
+                    <div class="appointment-header">
+                        <h2>Request an Appointment</h2>
+                        <p>Fill in your details below, and our care coordinators will reach out within 2 business hours
+                            to confirm your scheduled slot.</p>
+                    </div>
+
+                    <!-- Form Success/Error Banner -->
+                    <div class="form-feedback hidden" id="form-feedback" role="alert"></div>
+
+                    <form class="appointment-form" id="appointment-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="patient-name" class="form-label">Full Name <span
+                                        class="required">*</span></label>
+                                <input type="text" id="patient-name" name="name" class="form-input"
+                                    placeholder="e.g. John Doe" aria-required="true">
+                                <span class="input-error-msg" id="name-error" aria-live="polite"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="patient-email" class="form-label">Email Address <span
+                                        class="required">*</span></label>
+                                <input type="email" id="patient-email" name="email" class="form-input"
+                                    placeholder="e.g. john.doe@example.com" aria-required="true">
+                                <span class="input-error-msg" id="email-error" aria-live="polite"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="patient-phone" class="form-label">Phone Number <span
+                                        class="required">*</span></label>
+                                <input type="tel" id="patient-phone" name="phone" class="form-input"
+                                    placeholder="e.g. 555-019-2834" aria-required="true">
+                                <span class="input-error-msg" id="phone-error" aria-live="polite"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="patient-dept" class="form-label">Preferred Department <span
+                                        class="required">*</span></label>
+                                <div class="select-wrapper">
+                                    <select id="patient-dept" name="department" class="form-select"
+                                        aria-required="true">
+                                        <option value="" disabled selected>Select a Department</option>
+                                        <option value="General Medicine">General Medicine</option>
+                                        <option value="Cardiology">Cardiology</option>
+                                        <option value="Pediatrics">Pediatrics</option>
+                                        <option value="Dermatology">Dermatology</option>
+                                        <option value="Dental Care">Dental Care</option>
+                                        <option value="Diagnostics">Diagnostics & Lab</option>
+                                    </select>
+                                </div>
+                                <span class="input-error-msg" id="dept-error" aria-live="polite"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="patient-message" class="form-label">Message / Symptoms Summary <span
+                                    class="required">*</span></label>
+                            <textarea id="patient-message" name="message" class="form-textarea"
+                                placeholder="Briefly describe your request or health concern..."
+                                aria-required="true"></textarea>
+                            <span class="input-error-msg" id="message-error" aria-live="polite"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit" id="submit-appointment-btn">
+                            <span class="btn-text">Submit Request</span>
+                            <span class="btn-spinner hidden"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information & Maps Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container contact-container">
+                <div class="contact-info-panel">
+                    <span class="section-subtitle">Reach Out To Us</span>
+                    <h2 class="section-title">Contact CarePlus Clinic</h2>
+                    <p class="contact-intro">We are centrally located in the medical district, with ample visitor
+                        parking. Below are our fictional clinic details for your reference.</p>
+
+                    <div class="contact-details">
+                        <!-- Contact Detail 1: Address -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Clinic Location</h4>
+                                <p>456 CarePlus Boulevard, Suite 100, Medical City, MC 90210</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Detail 2: Phone -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Phone / Fax</h4>
+                                <p>+1 (555) 019-2834 / +1 (555) 019-2835</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Detail 3: Email -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Email Enquiries</h4>
+                                <p>info@careplusclinic.com</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Detail 4: Hours -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4>Opening Hours</h4>
+                                <p>Mon - Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM<br>Sun: Closed (Fictional
+                                    Emergency Lines Active)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.2528082188!2d-74.11976397095903!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588f046ee661%3A0xa0b3281fce79a1!2sManhattan%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1653775569421!5m2!1sen!2sus"
+                        class="map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="CarePlus Clinic Location Map - Fictional Location representation in Manhattan area"
+                        id="google-maps-frame">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand-col">
+                <a href="#home" class="logo footer-logo" aria-label="CarePlus Clinic footer logo">
+                    <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v20M2 12h20" />
+                    </svg>
+                    <span class="logo-text">CarePlus<span>Clinic</span></span>
+                </a>
+                <p class="footer-brand-desc">A fictional professional clinic model designed to showcase beautiful UI,
+                    clean responsive structures, and reliable client-side form validation procedures.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="CarePlus Clinic Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="CarePlus Clinic Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="CarePlus Clinic LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links-col">
+                <h3>Quick Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-choose-us">Why Choose Us</a></li>
+                    <li><a href="#doctors">Doctors</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Services Links -->
+            <div class="footer-links-col">
+                <h3>Our Departments</h3>
+                <ul class="footer-links">
+                    <li><a href="#services">General Medicine</a></li>
+                    <li><a href="#services">Cardiology</a></li>
+                    <li><a href="#services">Pediatrics</a></li>
+                    <li><a href="#services">Dermatology</a></li>
+                    <li><a href="#services">Dental Clinic</a></li>
+                    <li><a href="#services">Diagnostics Lab</a></li>
+                </ul>
+            </div>
+
+            <!-- Fictional Notice / Support -->
+            <div class="footer-contact-col">
+                <h3>CarePlus Support</h3>
+                <p><strong>Fictional Clinic Hours:</strong></p>
+                <p>Mon - Sat: 8:00 AM - 6:00 PM</p>
+                <p class="contact-link-wrapper">
+                    <span>Email:</span> <a href="mailto:info@careplusclinic.com">info@careplusclinic.com</a>
+                </p>
+                <p class="contact-link-wrapper">
+                    <span>Phone:</span> <a href="tel:+15550192834">+1 (555) 019-2834</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 CarePlus Clinic. All rights reserved. Designed for the iNeuBytes Web Development
+                    Internship.</p>
+                <div class="internship-badge">
+                    <span>Course ID: WBIN10726</span> | <span>Task 1 Submission</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
