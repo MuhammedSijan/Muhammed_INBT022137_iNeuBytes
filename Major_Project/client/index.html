@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediLink – Healthcare & Clinic Management System</title>
+  <meta name="description" content="MediLink is a unified modern healthcare platform connecting patients, doctors, and clinical departments with real-time appointment booking and clinical management.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-layout">
+    <!-- Fixed Left Sidebar -->
+    <aside class="app-sidebar" id="appSidebar">
+      <!-- Injected by js/app.js -->
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="app-main">
+      <!-- Global Topbar -->
+      <header class="app-topbar" id="appTopbar">
+        <!-- Injected by js/app.js -->
+      </header>
+
+      <!-- Page Content -->
+      <main class="app-content">
+        <!-- Hero Section -->
+        <section style="background: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 3rem 2.5rem; margin-bottom: 2.5rem; display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; align-items: center;">
+          <div>
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: var(--light-lavender); color: var(--primary-lavender); padding: 0.35rem 0.85rem; border-radius: var(--radius-full); font-size: 0.82rem; font-weight: 700; margin-bottom: 1.25rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+              Next-Generation Clinic Management
+            </div>
+
+            <h1 style="font-size: 2.85rem; font-weight: 800; line-height: 1.15; color: var(--text-primary); margin-bottom: 1.25rem; letter-spacing: -0.03em;">
+              Healthcare<br><span style="color: var(--primary-lavender);">Made Simple</span>
+            </h1>
+
+            <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 2rem; max-width: 520px;">
+              Find trusted doctors, manage appointments, and stay connected with your care — all in one place.
+            </p>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="doctors.html" class="btn btn-primary btn-lg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                Find a Doctor
+              </a>
+              <a href="appointments.html" class="btn btn-secondary btn-lg">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                Book Appointment
+              </a>
+            </div>
+
+            <!-- Demo System Indicators -->
+            <div style="margin-top: 2rem; display: flex; gap: 2rem; border-top: 1px solid var(--border-light); padding-top: 1.5rem;">
+              <div>
+                <div style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary);">6+</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Specialized Depts</div>
+              </div>
+              <div>
+                <div style="font-size: 1.35rem; font-weight: 800; color: var(--primary-lavender);">100%</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Real-Time DB Sync</div>
+              </div>
+              <div>
+                <div style="font-size: 1.35rem; font-weight: 800; color: var(--mint-dark);">0 Conflicts</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Smart Slot Engine</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Graphic Card Preview -->
+          <div style="background: linear-gradient(135deg, #182238 0%, #10182A 100%); border-radius: var(--radius-lg); padding: 2rem; color: #FFFFFF; box-shadow: var(--shadow-lg); position: relative; overflow: hidden;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+              <span class="badge" style="background: rgba(207, 245, 233, 0.2); color: #CFF5E9;">Live System Preview</span>
+              <span style="font-size: 0.8rem; color: #94A3B8;">MediLink v1.0</span>
+            </div>
+
+            <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.25rem;">
+              <div style="display: flex; gap: 1rem; align-items: center;">
+                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=150" alt="Doctor" style="width: 52px; height: 52px; border-radius: var(--radius-md); object-fit: cover;">
+                <div>
+                  <div style="font-weight: 700; color: #FFFFFF; font-size: 1rem;">Dr. Sarah Mitchell</div>
+                  <div style="font-size: 0.8rem; color: #A5B4FC;">Cardiology • 14 Years Exp</div>
+                </div>
+              </div>
+              <div style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.75rem; font-size: 0.85rem;">
+                <span style="color: #CBD5E1;">Next Available: Today 10:00 AM</span>
+                <span class="badge badge-confirmed">Available</span>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+              <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06); padding: 0.85rem; border-radius: var(--radius-sm);">
+                <div style="font-size: 0.72rem; color: #94A3B8;">AUTHENTICATION</div>
+                <div style="font-size: 0.92rem; font-weight: 600; color: #FFFFFF; margin-top: 0.2rem;">Role-Based RBAC</div>
+              </div>
+              <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06); padding: 0.85rem; border-radius: var(--radius-sm);">
+                <div style="font-size: 0.72rem; color: #94A3B8;">DATABASE</div>
+                <div style="font-size: 0.92rem; font-weight: 600; color: #CFF5E9; margin-top: 0.2rem;">MySQL Relational</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quick Access Module Cards -->
+        <section style="margin-bottom: 3rem;">
+          <div style="margin-bottom: 1.5rem;">
+            <h2>Integrated Clinical Modules</h2>
+            <p>Access specialized portals designed specifically for patients, medical staff, and administrators.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+            <!-- Patient Module Card -->
+            <div class="card" style="border-top: 4px solid var(--primary-lavender);">
+              <div class="stat-icon-wrapper" style="background: var(--light-lavender); color: var(--primary-lavender); margin-bottom: 1rem;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </div>
+              <h3>Patient Portal</h3>
+              <p style="margin: 0.5rem 0 1.25rem;">Browse specialist doctors, book and manage real-time appointments, review medical notes and consultation history.</p>
+              <a href="patient-dashboard.html" class="btn btn-outline-primary btn-sm">Enter Patient Portal &rarr;</a>
+            </div>
+
+            <!-- Doctor Module Card -->
+            <div class="card" style="border-top: 4px solid var(--mint-dark);">
+              <div class="stat-icon-wrapper" style="background: var(--mint-accent); color: var(--mint-dark); margin-bottom: 1rem;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+              </div>
+              <h3>Doctor Portal</h3>
+              <p style="margin: 0.5rem 0 1.25rem;">Review daily patient queues, manage consultation statuses, record clinical diagnoses and manage electronic prescriptions.</p>
+              <a href="doctor-dashboard.html" class="btn btn-outline-primary btn-sm">Enter Doctor Portal &rarr;</a>
+            </div>
+
+            <!-- Admin Module Card -->
+            <div class="card" style="border-top: 4px solid var(--sky-dark);">
+              <div class="stat-icon-wrapper" style="background: var(--soft-sky); color: var(--sky-dark); margin-bottom: 1rem;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              </div>
+              <h3>Admin Command Center</h3>
+              <p style="margin: 0.5rem 0 1.25rem;">Complete CRUD controls for patients, doctors, departments, and appointments with live analytics and status distribution reports.</p>
+              <a href="admin-dashboard.html" class="btn btn-outline-primary btn-sm">Enter Admin Portal &rarr;</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Doctor Spotlight Preview -->
+        <section style="margin-bottom: 3rem;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h2>Meet Our Clinical Specialists</h2>
+              <p>Top board-certified physicians across multiple hospital departments.</p>
+            </div>
+            <a href="doctors.html" class="btn btn-secondary">View All Doctors &rarr;</a>
+          </div>
+
+          <div class="doctors-grid" id="doctorsGridContainer">
+            <!-- Populated dynamically by doctors.js -->
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/doctors.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadDoctorsPage();
+    });
+  </script>
+</body>
+</html>

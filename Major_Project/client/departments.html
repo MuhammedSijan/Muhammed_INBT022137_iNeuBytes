@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinical Departments – MediLink</title>
+  <meta name="description" content="Explore specialized hospital departments, diagnostic divisions, and medical faculties.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-layout">
+    <!-- Fixed Left Sidebar -->
+    <aside class="app-sidebar" id="appSidebar"></aside>
+
+    <!-- Main Content Area -->
+    <div class="app-main">
+      <!-- Global Topbar -->
+      <header class="app-topbar" id="appTopbar"></header>
+
+      <!-- Page Content -->
+      <main class="app-content">
+        <!-- Page Header -->
+        <div class="dashboard-header">
+          <div class="dashboard-greeting">
+            <h1 class="dashboard-title">Medical & Clinical Departments</h1>
+            <p class="dashboard-subtitle">Dedicated medical faculties equipped with advanced diagnostics and specialist care teams.</p>
+          </div>
+          <div class="dashboard-actions" id="adminDeptControls" style="display:none;">
+            <button class="btn btn-primary" onclick="openCreateDepartmentModal()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              Add New Department (Admin)
+            </button>
+          </div>
+        </div>
+
+        <!-- Departments Grid -->
+        <div class="departments-grid" id="departmentsGridContainer">
+          <div style="grid-column:1/-1; text-align:center; padding:3rem; color:#94A3B8;">Loading departments...</div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/departments.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadDepartmentsPage();
+    });
+  </script>
+</body>
+</html>

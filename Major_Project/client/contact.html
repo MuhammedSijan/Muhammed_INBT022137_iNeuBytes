@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Clinic & Support – MediLink</title>
+  <meta name="description" content="Contact MediLink Clinic, emergency medical helpline, and appointment helpdesk.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="app-layout">
+    <!-- Fixed Left Sidebar -->
+    <aside class="app-sidebar" id="appSidebar"></aside>
+
+    <!-- Main Content Area -->
+    <div class="app-main">
+      <!-- Global Topbar -->
+      <header class="app-topbar" id="appTopbar"></header>
+
+      <!-- Page Content -->
+      <main class="app-content">
+        <div class="dashboard-header">
+          <div class="dashboard-greeting">
+            <h1 class="dashboard-title">Clinic Inquiries & Contact</h1>
+            <p class="dashboard-subtitle">Reach out to our clinical reception, emergency desk, or administrative support.</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem;">
+          <!-- Left Column: Contact Form -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Send a Clinical Message</h3>
+            </div>
+
+            <form id="contactForm" onsubmit="handleContactSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contactName">Your Name *</label>
+                  <input type="text" id="contactName" class="form-control" required placeholder="e.g. Sarah Connor">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contactEmail">Email Address *</label>
+                  <input type="email" id="contactEmail" class="form-control" required placeholder="sarah@example.com">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactSubject">Subject / Department</label>
+                <select id="contactSubject" class="form-control">
+                  <option value="General Inquiry">General Clinic Inquiry</option>
+                  <option value="Appointment Follow-up">Appointment Follow-up</option>
+                  <option value="Billing & Insurance">Consultation Fee & Billing</option>
+                  <option value="Medical Records">Medical Records Request</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contactMessage">Your Message *</label>
+                <textarea id="contactMessage" class="form-control" rows="5" required placeholder="How can our clinical team assist you?"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <!-- Right Column: Clinic Information & Hours -->
+          <div>
+            <div class="card" style="margin-bottom: 1.5rem;">
+              <div class="card-header">
+                <h3 class="card-title">Clinic Contact Information</h3>
+              </div>
+
+              <div style="display:flex; flex-direction:column; gap:1.25rem;">
+                <div style="display:flex; gap:1rem; align-items:flex-start;">
+                  <div class="stat-icon-wrapper" style="background:var(--light-lavender); color:var(--primary-lavender); width:40px; height:40px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div>
+                    <div style="font-weight:700; color:var(--text-primary);">Main Medical Facility</div>
+                    <div style="font-size:0.9rem; color:var(--text-secondary);">450 Healthcare Boulevard, Innovation Medical Center, Suite 300</div>
+                  </div>
+                </div>
+
+                <div style="display:flex; gap:1rem; align-items:flex-start;">
+                  <div class="stat-icon-wrapper" style="background:var(--mint-accent); color:var(--mint-dark); width:40px; height:40px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </div>
+                  <div>
+                    <div style="font-weight:700; color:var(--text-primary);">Reception Desk</div>
+                    <div style="font-size:0.9rem; color:var(--text-secondary);">+1 (555) 019-2800 • support@medilink.com</div>
+                  </div>
+                </div>
+
+                <div style="display:flex; gap:1rem; align-items:flex-start;">
+                  <div class="stat-icon-wrapper" style="background:var(--danger-bg); color:var(--danger); width:40px; height:40px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                  </div>
+                  <div>
+                    <div style="font-weight:700; color:var(--danger);">24/7 Urgent Triage Helpline</div>
+                    <div style="font-size:0.9rem; color:var(--text-secondary);">+1 (800) 555-CARE (Emergency Desk)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Operating Hours Card -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Outpatient Consulting Hours</h3>
+              </div>
+              <div style="font-size:0.9rem; color:var(--text-secondary); display:flex; flex-direction:column; gap:0.5rem;">
+                <div style="display:flex; justify-content:space-between;">
+                  <span>Monday – Friday:</span>
+                  <strong>08:00 AM – 06:00 PM</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between;">
+                  <span>Saturday:</span>
+                  <strong>09:00 AM – 03:00 PM</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; color:#EF5350;">
+                  <span>Sunday:</span>
+                  <strong>Emergency Triage Only</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      showToast('Thank you! Your message has been routed to the clinic reception team.', 'success');
+      document.getElementById('contactForm').reset();
+    }
+  </script>
+</body>
+</html>

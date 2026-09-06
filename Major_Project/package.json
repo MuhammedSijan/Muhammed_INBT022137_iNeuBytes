@@ -1,0 +1,29 @@
+{
+  "name": "medilink-healthcare-system",
+  "version": "1.0.0",
+  "description": "MediLink – Healthcare & Clinic Management System (iNeuBytes Major Project)",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js",
+    "init-db": "node server/utils/initDb.js"
+  },
+  "keywords": [
+    "healthcare",
+    "clinic-management",
+    "hospital-system",
+    "mysql",
+    "express",
+    "ineubytes"
+  ],
+  "author": "Muhammed Sijan (iNeuBytes Intern)",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.12.0"
+  }
+}

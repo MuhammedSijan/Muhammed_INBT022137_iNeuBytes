@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In – MediLink Healthcare System</title>
+  <meta name="description" content="Secure portal login for MediLink patients, doctors, and administrators.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <div class="auth-page-wrapper">
+    <div class="auth-card">
+      <div class="auth-header">
+        <a href="index.html" class="auth-brand">
+          <div class="brand-icon">M</div>
+          <span class="brand-title" style="color: var(--text-primary); font-size: 1.4rem;">MediLink</span>
+        </a>
+        <h1 class="auth-title">Welcome Back</h1>
+        <p class="auth-subtitle">Sign in to access your healthcare management dashboard</p>
+      </div>
+
+      <!-- 1-Click Demo Accounts Quick-Fill Box -->
+      <div class="demo-accounts-box">
+        <div class="demo-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+          1-Click Demo Account Quick Fill
+        </div>
+        <div class="demo-buttons-grid">
+          <button type="button" class="demo-btn" onclick="fillDemoAccount('patient')">
+            👤 Patient
+          </button>
+          <button type="button" class="demo-btn" onclick="fillDemoAccount('doctor')">
+            🩺 Doctor
+          </button>
+          <button type="button" class="demo-btn" onclick="fillDemoAccount('admin')">
+            ⚡ Admin
+          </button>
+        </div>
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="name@medilink.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <label class="form-label" for="password">Password</label>
+            <a href="javascript:void(0)" onclick="showToast('For demo accounts, use password pre-filled in 1-Click box.', 'info')" style="font-size: 0.8rem;">Forgot password?</a>
+          </div>
+          <input type="password" id="password" class="form-control" placeholder="••••••••" required autocomplete="current-password">
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem; padding: 0.75rem;">
+          Sign In
+        </button>
+      </form>
+
+      <div class="auth-footer">
+        <p>Don't have an account? <a href="register.html" style="font-weight: 600;">Create Patient Account</a></p>
+        <div style="margin-top: 1rem;">
+          <a href="index.html" style="font-size: 0.85rem; color: var(--text-muted);">&larr; Return to Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
