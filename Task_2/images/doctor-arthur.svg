@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-arthur" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="skin-arthur" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="100" fill="url(#bg-arthur)"/>
+  <circle cx="100" cy="100" r="96" fill="none" stroke="#475569" stroke-width="2" stroke-opacity="0.2"/>
+  
+  <!-- Body / Coat -->
+  <path d="M45,200 C45,150 70,135 100,135 C130,135 155,150 155,200 Z" fill="#1e293b"/>
+  <!-- Blue Shirt & Burgundy Tie -->
+  <path d="M85,140 L100,175 L115,140 Z" fill="#bae6fd"/>
+  <path d="M98,145 L102,145 L104,182 L96,182 Z" fill="#991b1b"/>
+  <!-- White Lab Coat -->
+  <path d="M45,200 C45,155 68,140 85,140 L94,195 L75,200 Z" fill="#ffffff"/>
+  <path d="M155,200 C155,155 132,140 115,140 L106,195 L125,200 Z" fill="#ffffff"/>
+  
+  <!-- Stethoscope -->
+  <path d="M78,145 C78,175 92,185 100,185 C108,185 122,175 122,145" fill="none" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="100" cy="188" r="6" fill="#94a3b8" stroke="#1e293b" stroke-width="2"/>
+  
+  <!-- Neck -->
+  <rect x="90" y="115" width="20" height="25" rx="4" fill="url(#skin-arthur)"/>
+  
+  <!-- Head -->
+  <ellipse cx="100" cy="88" rx="27" ry="30" fill="url(#skin-arthur)"/>
+  
+  <!-- Graying Hair / Temples -->
+  <path d="M73,78 C73,50 127,50 127,78 C127,62 118,50 100,50 C82,50 73,62 73,78 Z" fill="#64748b"/>
+  <path d="M72,75 C72,60 82,53 95,51 C82,55 74,65 72,75 Z" fill="#cbd5e1"/>
+  <path d="M128,75 C128,60 118,53 105,51 C118,55 126,65 128,75 Z" fill="#cbd5e1"/>
+  
+  <!-- Glasses -->
+  <circle cx="87" cy="88" r="8" fill="none" stroke="#475569" stroke-width="2"/>
+  <circle cx="113" cy="88" r="8" fill="none" stroke="#475569" stroke-width="2"/>
+  <line x1="95" y1="88" x2="105" y2="88" stroke="#475569" stroke-width="2"/>
+  <line x1="74" y1="85" x2="79" y2="87" stroke="#475569" stroke-width="2"/>
+  <line x1="121" y1="87" x2="126" y2="85" stroke="#475569" stroke-width="2"/>
+  
+  <!-- Eyes -->
+  <circle cx="87" cy="88" r="2.5" fill="#1e293b"/>
+  <circle cx="113" cy="88" r="2.5" fill="#1e293b"/>
+  
+  <!-- Eyebrows (Gray) -->
+  <path d="M80,78 C83,76 92,76 94,78" fill="none" stroke="#94a3b8" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M106,78 C108,76 117,76 120,78" fill="none" stroke="#94a3b8" stroke-width="2.2" stroke-linecap="round"/>
+  
+  <!-- Nose -->
+  <path d="M100,88 L97,97 L103,97" fill="none" stroke="#ea580c" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  
+  <!-- Experienced Warm Smile & Mustache/Lines -->
+  <path d="M92,105 C96,109 104,109 108,105" fill="none" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+  <path d="M82,92 C80,95 80,98 82,101" fill="none" stroke="#ea580c" stroke-width="1" opacity="0.4"/>
+  <path d="M118,92 C120,95 120,98 118,101" fill="none" stroke="#ea580c" stroke-width="1" opacity="0.4"/>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-sarah" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="skin-sarah" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fdba74"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="100" fill="url(#bg-sarah)"/>
+  <circle cx="100" cy="100" r="96" fill="none" stroke="#0284c7" stroke-width="2" stroke-opacity="0.2"/>
+  
+  <!-- Hair Back -->
+  <path d="M65,75 C65,40 135,40 135,75 C135,115 140,140 140,145 C135,145 130,130 130,110 L70,110 C70,130 65,145 60,145 C60,140 65,115 65,75 Z" fill="#78350f"/>
+  
+  <!-- Body / Coat -->
+  <path d="M45,200 C45,150 70,135 100,135 C130,135 155,150 155,200 Z" fill="#0f172a"/>
+  <!-- Scrub/Shirt -->
+  <path d="M85,140 L100,165 L115,140 Z" fill="#0284c7"/>
+  <!-- White Lab Coat -->
+  <path d="M45,200 C45,155 65,140 85,140 L95,190 L75,200 Z" fill="#ffffff"/>
+  <path d="M155,200 C155,155 135,140 115,140 L105,190 L125,200 Z" fill="#ffffff"/>
+  <!-- Coat Collar -->
+  <path d="M85,140 L100,175 L95,140 Z" fill="#f1f5f9"/>
+  <path d="M115,140 L100,175 L105,140 Z" fill="#f1f5f9"/>
+  
+  <!-- Stethoscope -->
+  <path d="M78,145 C78,175 92,185 100,185 C108,185 122,175 122,145" fill="none" stroke="#475569" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="100" cy="188" r="6" fill="#94a3b8" stroke="#334155" stroke-width="2"/>
+  <circle cx="100" cy="188" r="2.5" fill="#0284c7"/>
+  
+  <!-- Neck -->
+  <rect x="90" y="115" width="20" height="25" rx="4" fill="url(#skin-sarah)"/>
+  
+  <!-- Head -->
+  <ellipse cx="100" cy="90" rx="28" ry="32" fill="url(#skin-sarah)"/>
+  
+  <!-- Hair Front -->
+  <path d="M72,80 C75,55 125,55 128,80 C128,80 120,65 100,65 C80,65 72,80 72,80 Z" fill="#92400e"/>
+  <path d="M72,75 C72,60 85,50 100,50 C115,50 128,60 128,75 C125,65 115,58 100,58 C85,58 75,65 72,75 Z" fill="#78350f"/>
+  
+  <!-- Face Features -->
+  <!-- Eyes -->
+  <ellipse cx="88" cy="88" rx="3" ry="4" fill="#1e293b"/>
+  <ellipse cx="112" cy="88" rx="3" ry="4" fill="#1e293b"/>
+  <circle cx="89" cy="86.5" r="1" fill="#ffffff"/>
+  <circle cx="113" cy="86.5" r="1" fill="#ffffff"/>
+  <!-- Eyebrows -->
+  <path d="M83,82 C86,79 93,80 94,83" fill="none" stroke="#78350f" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M106,83 C107,80 114,79 117,82" fill="none" stroke="#78350f" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Nose -->
+  <path d="M100,88 L98,96 L102,96" fill="none" stroke="#ea580c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  <!-- Smile -->
+  <path d="M92,104 C96,109 104,109 108,104" fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <circle cx="82" cy="97" r="4" fill="#f87171" opacity="0.3"/>
+  <circle cx="118" cy="97" r="4" fill="#f87171" opacity="0.3"/>
+</svg>

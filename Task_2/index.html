@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MedoraCare - Modern Doctor Appointment Booking System. Search verified doctors across medical departments, check real-time availability, and schedule appointments instantly.">
+  <title>MedoraCare | Doctor Appointment Booking System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Notification Toast Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#home" class="brand-logo" aria-label="MedoraCare Homepage">
+        <span class="brand-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </span>
+        <span class="brand-name">Medora<span class="brand-accent">Care</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#departments" class="nav-link">Departments</a></li>
+          <li><a href="#doctors" class="nav-link">Doctors</a></li>
+          <li><a href="#booking" class="nav-link">Book Appointment</a></li>
+          <li><a href="#history" class="nav-link">Appointment History</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#booking" class="btn btn-primary btn-sm header-cta">Book Now</a>
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#departments" class="mobile-nav-link">Departments</a></li>
+        <li><a href="#doctors" class="mobile-nav-link">Doctors</a></li>
+        <li><a href="#booking" class="mobile-nav-link">Book Appointment</a></li>
+        <li><a href="#history" class="mobile-nav-link">Appointment History</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <a href="#booking" class="btn btn-primary btn-block mobile-cta">Schedule Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- Hero / Introduction Section -->
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Healthcare Appointment Portal</span>
+          </div>
+          <h1 class="hero-title">Find Experienced Doctors &amp; Book Consultations Easily</h1>
+          <p class="hero-description">
+            Search verified medical specialists across key departments. Select convenient dates, choose available time slots, and receive instant booking confirmation.
+          </p>
+          <div class="hero-actions">
+            <a href="#booking" class="btn btn-primary btn-lg">Book Appointment</a>
+            <a href="#doctors" class="btn btn-secondary btn-lg">Browse Doctors</a>
+          </div>
+          <div class="hero-trust-indicators">
+            <div class="trust-item">
+              <div class="trust-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="trust-text">
+                <strong>Verified Doctors</strong>
+                <span>Certified medical specialists</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+              </div>
+              <div class="trust-text">
+                <strong>Flexible Scheduling</strong>
+                <span>Real-time available time slots</span>
+              </div>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </div>
+              <div class="trust-text">
+                <strong>Easy Booking</strong>
+                <span>Fast &amp; verified confirmation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Quick Search Card -->
+        <div class="hero-card-wrapper">
+          <div class="hero-card">
+            <div class="hero-card-header">
+              <h3>Quick Doctor Lookup</h3>
+              <p>Find doctors by department or name</p>
+            </div>
+            <form id="hero-quick-search-form" class="quick-search-form" onsubmit="return false;">
+              <div class="form-group">
+                <label for="hero-dept-select">Department</label>
+                <select id="hero-dept-select" class="form-control">
+                  <option value="all">All Departments</option>
+                  <option value="Cardiology">Cardiology</option>
+                  <option value="Dermatology">Dermatology</option>
+                  <option value="Neurology">Neurology</option>
+                  <option value="Pediatrics">Pediatrics</option>
+                  <option value="Orthopedics">Orthopedics</option>
+                  <option value="General Medicine">General Medicine</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="hero-doctor-search">Doctor Name or Keyword</label>
+                <input type="text" id="hero-doctor-search" class="form-control" placeholder="e.g. Dr. Sarah, heart, skin...">
+              </div>
+              <button type="button" id="hero-search-btn" class="btn btn-primary btn-block">Find Matching Doctors</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section class="departments-section section-padding" id="departments">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Clinical Specialties</span>
+          <h2 class="section-title">Medical Departments</h2>
+          <p class="section-subtitle">Explore our specialized medical fields offering comprehensive diagnostic and therapeutic care.</p>
+        </div>
+
+        <div class="departments-grid">
+          <!-- Cardiology -->
+          <div class="dept-card" data-dept="Cardiology" role="button" tabindex="0" aria-label="Filter by Cardiology">
+            <div class="dept-icon-wrapper dept-cardiology">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <h3 class="dept-title">Cardiology</h3>
+            <p class="dept-desc">Cardiovascular health, arrhythmia assessment, and heart wellness consultations.</p>
+            <span class="dept-link">View Doctors &rarr;</span>
+          </div>
+
+          <!-- Dermatology -->
+          <div class="dept-card" data-dept="Dermatology" role="button" tabindex="0" aria-label="Filter by Dermatology">
+            <div class="dept-icon-wrapper dept-dermatology">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                <path d="M2 12h20"></path>
+              </svg>
+            </div>
+            <h3 class="dept-title">Dermatology</h3>
+            <p class="dept-desc">Skin conditions, acne management, allergy diagnostics, and dermatological care.</p>
+            <span class="dept-link">View Doctors &rarr;</span>
+          </div>
+
+          <!-- Neurology -->
+          <div class="dept-card" data-dept="Neurology" role="button" tabindex="0" aria-label="Filter by Neurology">
+            <div class="dept-icon-wrapper dept-neurology">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="4"></circle>
+                <line x1="1.05" y1="12" x2="7" y2="12"></line>
+                <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="dept-title">Neurology</h3>
+            <p class="dept-desc">Neurodegenerative evaluations, headache therapy, and cognitive nervous system care.</p>
+            <span class="dept-link">View Doctors &rarr;</span>
+          </div>
+
+          <!-- Pediatrics -->
+          <div class="dept-card" data-dept="Pediatrics" role="button" tabindex="0" aria-label="Filter by Pediatrics">
+            <div class="dept-icon-wrapper dept-pediatrics">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="dept-title">Pediatrics</h3>
+            <p class="dept-desc">Child development tracking, pediatric wellness, immunizations, and youth health.</p>
+            <span class="dept-link">View Doctors &rarr;</span>
+          </div>
+
+          <!-- Orthopedics -->
+          <div class="dept-card" data-dept="Orthopedics" role="button" tabindex="0" aria-label="Filter by Orthopedics">
+            <div class="dept-icon-wrapper dept-orthopedics">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 18h12"></path>
+                <path d="M6 6h12"></path>
+                <path d="M12 6v12"></path>
+              </svg>
+            </div>
+            <h3 class="dept-title">Orthopedics</h3>
+            <p class="dept-desc">Joint health, sports injury treatment, bone rehabilitation, and mobility support.</p>
+            <span class="dept-link">View Doctors &rarr;</span>
+          </div>
+
+          <!-- General Medicine -->
+          <div class="dept-card" data-dept="General Medicine" role="button" tabindex="0" aria-label="Filter by General Medicine">
+            <div class="dept-icon-wrapper dept-general">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3 class="dept-title">General Medicine</h3>
+            <p class="dept-desc">Comprehensive health checkups, preventative screenings, and illness management.</p>
+            <span class="dept-link">View Doctors &rarr;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Doctors Directory Section -->
+    <section class="doctors-section section-padding bg-light" id="doctors">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Find Your Specialist</span>
+          <h2 class="section-title">Doctor Directory</h2>
+          <p class="section-subtitle">Search and filter certified medical practitioners by name, department, or specialization.</p>
+        </div>
+
+        <!-- Filter and Search Bar -->
+        <div class="search-filter-panel">
+          <div class="search-input-group">
+            <span class="search-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
+            <input type="text" id="doctor-search-input" class="search-input" placeholder="Search by doctor name or specialization (e.g., Sarah, skin, heart)..." aria-label="Search doctors by name or specialization">
+            <button type="button" id="clear-search-btn" class="clear-search-btn" aria-label="Clear search query" style="display: none;">&times;</button>
+          </div>
+
+          <div class="filter-controls">
+            <!-- Department Pills -->
+            <div class="department-pills" role="tablist" aria-label="Filter by department">
+              <button type="button" class="filter-pill active" data-dept="all" role="tab" aria-selected="true">All Departments</button>
+              <button type="button" class="filter-pill" data-dept="Cardiology" role="tab" aria-selected="false">Cardiology</button>
+              <button type="button" class="filter-pill" data-dept="Dermatology" role="tab" aria-selected="false">Dermatology</button>
+              <button type="button" class="filter-pill" data-dept="Neurology" role="tab" aria-selected="false">Neurology</button>
+              <button type="button" class="filter-pill" data-dept="Pediatrics" role="tab" aria-selected="false">Pediatrics</button>
+              <button type="button" class="filter-pill" data-dept="Orthopedics" role="tab" aria-selected="false">Orthopedics</button>
+              <button type="button" class="filter-pill" data-dept="General Medicine" role="tab" aria-selected="false">General Medicine</button>
+            </div>
+
+            <!-- Sort dropdown -->
+            <div class="sort-wrapper">
+              <label for="sort-select" class="sr-only">Sort Doctors</label>
+              <select id="sort-select" class="sort-select" aria-label="Sort doctors">
+                <option value="featured">Featured Doctors</option>
+                <option value="experience-desc">Experience (Highest First)</option>
+                <option value="fee-asc">Fee (Low to High)</option>
+                <option value="fee-desc">Fee (High to Low)</option>
+                <option value="name-asc">Name (A-Z)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Counter -->
+        <div class="results-meta">
+          <span id="results-count">Showing 8 doctors</span>
+          <button type="button" id="reset-all-filters-btn" class="reset-link" style="display: none;">Reset all filters</button>
+        </div>
+
+        <!-- Doctor Cards Grid Container -->
+        <div id="doctors-grid" class="doctors-grid" aria-live="polite">
+          <!-- Populated dynamically via JavaScript -->
+        </div>
+
+        <!-- Empty State Container -->
+        <div id="no-doctors-found" class="empty-state" style="display: none;">
+          <div class="empty-state-icon">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+          <h3>No Doctors Found</h3>
+          <p id="empty-state-message">No doctor matches your current search criteria. Try adjusting your query or selecting another department.</p>
+          <button type="button" id="empty-reset-btn" class="btn btn-secondary">Reset Search &amp; Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appointment Booking Section -->
+    <section class="booking-section section-padding" id="booking">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Schedule a Visit</span>
+          <h2 class="section-title">Book an Appointment</h2>
+          <p class="section-subtitle">Fill in patient information, select your doctor, choose a convenient date, and pick an available time slot.</p>
+        </div>
+
+        <div class="booking-layout">
+          <!-- Main Booking Form -->
+          <div class="booking-form-card">
+            <form id="appointment-form" novalidate>
+              
+              <!-- Step 1: Patient Information -->
+              <div class="form-section">
+                <div class="form-section-title">
+                  <span class="section-step">1</span>
+                  <h3>Patient Details</h3>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="patient-name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="patient-name" name="patientName" class="form-control" placeholder="e.g. John Doe" required autocomplete="name">
+                    <div class="field-error" id="patient-name-error" aria-live="polite"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="patient-email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="patient-email" name="patientEmail" class="form-control" placeholder="e.g. john@example.com" required autocomplete="email">
+                    <div class="field-error" id="patient-email-error" aria-live="polite"></div>
+                  </div>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="patient-phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="patient-phone" name="patientPhone" class="form-control" placeholder="e.g. +1 (555) 234-5678" required autocomplete="tel">
+                    <div class="field-error" id="patient-phone-error" aria-live="polite"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="patient-reason">Reason for Visit <span class="optional">(Optional)</span></label>
+                    <input type="text" id="patient-reason" name="patientReason" class="form-control" placeholder="e.g. Routine checkup, skin rash, consultation">
+                    <div class="field-error" id="patient-reason-error" aria-live="polite"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 2: Doctor & Department Selection -->
+              <div class="form-section">
+                <div class="form-section-title">
+                  <span class="section-step">2</span>
+                  <h3>Select Department &amp; Doctor</h3>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="booking-dept">Department <span class="required">*</span></label>
+                    <select id="booking-dept" name="bookingDept" class="form-control" required>
+                      <option value="">Select Department...</option>
+                      <option value="Cardiology">Cardiology</option>
+                      <option value="Dermatology">Dermatology</option>
+                      <option value="Neurology">Neurology</option>
+                      <option value="Pediatrics">Pediatrics</option>
+                      <option value="Orthopedics">Orthopedics</option>
+                      <option value="General Medicine">General Medicine</option>
+                    </select>
+                    <div class="field-error" id="booking-dept-error" aria-live="polite"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="booking-doctor">Doctor <span class="required">*</span></label>
+                    <select id="booking-doctor" name="bookingDoctor" class="form-control" required>
+                      <option value="">Select Doctor...</option>
+                      <!-- Options populated dynamically based on department -->
+                    </select>
+                    <div class="field-error" id="booking-doctor-error" aria-live="polite"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 3: Date & Time Selection -->
+              <div class="form-section">
+                <div class="form-section-title">
+                  <span class="section-step">3</span>
+                  <h3>Select Date &amp; Time Slot</h3>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="booking-date">Appointment Date <span class="required">*</span></label>
+                    <input type="date" id="booking-date" name="bookingDate" class="form-control" required>
+                    <small class="form-help-text">Past dates are not available for booking</small>
+                    <div class="field-error" id="booking-date-error" aria-live="polite"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Available Time Slots <span class="required">*</span></label>
+                    <div id="time-slots-container" class="time-slots-grid" aria-label="Available time slots">
+                      <div class="slots-placeholder">Please select a doctor and date to view time slots</div>
+                    </div>
+                    <!-- Hidden input to store chosen slot value for validation -->
+                    <input type="hidden" id="selected-time-slot" name="selectedTimeSlot" value="" required>
+                    <div class="field-error" id="booking-slot-error" aria-live="polite"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form Action Buttons -->
+              <div class="form-actions">
+                <button type="submit" id="submit-booking-btn" class="btn btn-primary btn-lg btn-block">
+                  <span class="btn-text">Confirm &amp; Book Appointment</span>
+                  <span class="btn-spinner" style="display: none;"></span>
+                </button>
+                <p class="form-disclaimer">By booking, your appointment details will be securely saved locally in your browser.</p>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Sticky Live Booking Summary Sidebar -->
+          <aside class="booking-summary-sidebar" aria-label="Live Booking Summary">
+            <div class="summary-card" id="live-summary-card">
+              <h3 class="summary-title">Appointment Summary</h3>
+              <div class="summary-doctor-preview" id="summary-doctor-preview">
+                <div class="summary-doc-avatar">
+                  <img id="summary-doc-img" src="images/doctor-sarah.svg" alt="Doctor avatar preview">
+                </div>
+                <div class="summary-doc-info">
+                  <h4 id="summary-doc-name">Dr. Sarah Jenkins</h4>
+                  <span class="summary-doc-dept" id="summary-doc-dept">Cardiology</span>
+                  <span class="summary-doc-spec" id="summary-doc-spec">Interventional Cardiology</span>
+                </div>
+              </div>
+
+              <hr class="summary-divider">
+
+              <div class="summary-details-list">
+                <div class="summary-item">
+                  <span class="summary-label">Date:</span>
+                  <span class="summary-value" id="summary-date-display">Not selected</span>
+                </div>
+                <div class="summary-item">
+                  <span class="summary-label">Time Slot:</span>
+                  <span class="summary-value" id="summary-slot-display">Not selected</span>
+                </div>
+                <div class="summary-item">
+                  <span class="summary-label">Consultation Fee:</span>
+                  <span class="summary-value fee-highlight" id="summary-fee-display">$120</span>
+                </div>
+                <div class="summary-item">
+                  <span class="summary-label">Booking Fee:</span>
+                  <span class="summary-value text-success">$0 (Free)</span>
+                </div>
+              </div>
+
+              <hr class="summary-divider">
+
+              <div class="summary-total">
+                <span>Estimated Total:</span>
+                <span class="total-amount" id="summary-total-display">$120</span>
+              </div>
+
+              <div class="summary-features">
+                <div class="feature-bullet">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Instant reference generation</span>
+                </div>
+                <div class="feature-bullet">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>Saved in Appointment History</span>
+                </div>
+                <div class="feature-bullet">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                  <span>No prepayment required</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appointment History Section -->
+    <section class="history-section section-padding bg-light" id="history">
+      <div class="container">
+        <div class="section-header-flex">
+          <div>
+            <span class="section-tag">Booking Records</span>
+            <h2 class="section-title">Appointment History</h2>
+            <p class="section-subtitle">View and manage your previous bookings stored securely in this browser session.</p>
+          </div>
+          <div class="history-actions" id="history-header-actions" style="display: none;">
+            <button type="button" id="clear-history-btn" class="btn btn-outline-danger btn-sm">Clear History</button>
+          </div>
+        </div>
+
+        <!-- Appointment History Container -->
+        <div id="history-content-area">
+          <!-- Loaded dynamically: Table on desktop, cards on mobile, or empty state -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Doctor Profile Modal -->
+  <div class="modal-backdrop" id="doctor-modal" role="dialog" aria-modal="true" aria-labelledby="modal-doc-name" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close doctor profile modal">&times;</button>
+        
+        <div class="modal-header-profile">
+          <div class="modal-avatar-wrapper">
+            <img id="modal-doc-image" src="" alt="Doctor profile picture">
+          </div>
+          <div class="modal-intro">
+            <span class="modal-dept-badge" id="modal-doc-dept">Department</span>
+            <h3 id="modal-doc-name" class="modal-title">Doctor Name</h3>
+            <p id="modal-doc-spec" class="modal-spec">Specialization</p>
+            <div class="modal-quick-meta">
+              <span class="meta-tag" id="modal-doc-exp">10 Yrs Experience</span>
+              <span class="meta-tag fee-tag" id="modal-doc-fee">$100 Consultation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-section">
+            <h4 class="modal-section-title">About the Doctor</h4>
+            <p id="modal-doc-bio" class="modal-text">Doctor bio description goes here.</p>
+          </div>
+
+          <div class="modal-section">
+            <h4 class="modal-section-title">Education &amp; Credentials</h4>
+            <p id="modal-doc-edu" class="modal-text">Medical credentials and affiliations.</p>
+          </div>
+
+          <div class="modal-section">
+            <h4 class="modal-section-title">Standard Consultation Days</h4>
+            <div id="modal-doc-schedule" class="schedule-pills"></div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" id="modal-cancel-btn" class="btn btn-secondary">Close</button>
+          <button type="button" id="modal-book-btn" class="btn btn-primary">Book Appointment with This Doctor</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Appointment Confirmation & Receipt Modal -->
+  <div class="modal-backdrop" id="confirmation-modal" role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-receipt-dialog">
+      <div class="modal-content receipt-modal-content">
+        <button type="button" class="modal-close-btn" id="confirm-modal-close-btn" aria-label="Close confirmation dialog">&times;</button>
+        
+        <div class="receipt-header text-center">
+          <div class="success-icon-badge">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h3 id="confirm-modal-title" class="receipt-title">Appointment Confirmed!</h3>
+          <p class="receipt-subtitle">Your appointment has been successfully scheduled and saved.</p>
+          <div class="ref-badge-wrapper">
+            <span class="ref-label">Appointment Reference:</span>
+            <span class="ref-code" id="confirm-ref-code">MDC-2026-0000</span>
+          </div>
+        </div>
+
+        <div class="receipt-body" id="printable-receipt">
+          <div class="receipt-table">
+            <div class="receipt-row">
+              <span class="receipt-row-label">Patient Name:</span>
+              <span class="receipt-row-val" id="confirm-patient-name">-</span>
+            </div>
+            <div class="receipt-row">
+              <span class="receipt-row-label">Contact Email:</span>
+              <span class="receipt-row-val" id="confirm-patient-email">-</span>
+            </div>
+            <div class="receipt-row">
+              <span class="receipt-row-label">Contact Phone:</span>
+              <span class="receipt-row-val" id="confirm-patient-phone">-</span>
+            </div>
+            <div class="receipt-row">
+              <span class="receipt-row-label">Doctor:</span>
+              <span class="receipt-row-val" id="confirm-doctor-name">-</span>
+            </div>
+            <div class="receipt-row">
+              <span class="receipt-row-label">Department:</span>
+              <span class="receipt-row-val" id="confirm-dept-name">-</span>
+            </div>
+            <div class="receipt-row">
+              <span class="receipt-row-label">Date &amp; Time:</span>
+              <span class="receipt-row-val highlight-val" id="confirm-datetime-val">-</span>
+            </div>
+            <div class="receipt-row">
+              <span class="receipt-row-label">Consultation Fee:</span>
+              <span class="receipt-row-val" id="confirm-fee-val">-</span>
+            </div>
+            <div class="receipt-row">
+              <span class="receipt-row-label">Booking Status:</span>
+              <span class="receipt-row-val"><span class="status-badge status-confirmed">Confirmed</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="receipt-footer">
+          <button type="button" id="confirm-print-btn" class="btn btn-secondary">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            Print Receipt
+          </button>
+          <button type="button" id="confirm-view-history-btn" class="btn btn-primary">View in Appointment History</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-col">
+        <a href="#home" class="footer-logo">
+          <span class="brand-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </span>
+          <span class="brand-name">Medora<span class="brand-accent">Care</span></span>
+        </a>
+        <p class="footer-description">
+          A dedicated frontend Doctor Appointment Booking System designed for convenient healthcare specialist scheduling and record management.
+        </p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#departments">Departments</a></li>
+          <li><a href="#doctors">Doctor Directory</a></li>
+          <li><a href="#booking">Book Appointment</a></li>
+          <li><a href="#history">Appointment History</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Departments</h4>
+        <ul>
+          <li><a href="#doctors" class="dept-footer-link" data-dept="Cardiology">Cardiology</a></li>
+          <li><a href="#doctors" class="dept-footer-link" data-dept="Dermatology">Dermatology</a></li>
+          <li><a href="#doctors" class="dept-footer-link" data-dept="Neurology">Neurology</a></li>
+          <li><a href="#doctors" class="dept-footer-link" data-dept="Pediatrics">Pediatrics</a></li>
+          <li><a href="#doctors" class="dept-footer-link" data-dept="Orthopedics">Orthopedics</a></li>
+          <li><a href="#doctors" class="dept-footer-link" data-dept="General Medicine">General Medicine</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 MedoraCare Healthcare Portal. Fictional demo application created for iNeuBytes Internship Task 2.</p>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript Application Logic -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-elena" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fae8ff"/>
+      <stop offset="100%" stop-color="#f5d0fe"/>
+    </linearGradient>
+    <linearGradient id="skin-elena" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#fcd34d"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="100" fill="url(#bg-elena)"/>
+  <circle cx="100" cy="100" r="96" fill="none" stroke="#c026d3" stroke-width="2" stroke-opacity="0.2"/>
+  
+  <!-- Hair Back / Bun -->
+  <circle cx="100" cy="50" r="22" fill="#18181b"/>
+  
+  <!-- Body / Coat -->
+  <path d="M45,200 C45,150 70,135 100,135 C130,135 155,150 155,200 Z" fill="#4a044e"/>
+  <!-- Inner shirt -->
+  <path d="M85,140 L100,168 L115,140 Z" fill="#701a75"/>
+  <!-- White Lab Coat -->
+  <path d="M45,200 C45,155 65,140 85,140 L96,192 L75,200 Z" fill="#ffffff"/>
+  <path d="M155,200 C155,155 135,140 115,140 L104,192 L125,200 Z" fill="#ffffff"/>
+  
+  <!-- Neck -->
+  <rect x="90" y="115" width="20" height="25" rx="4" fill="#fde68a"/>
+  
+  <!-- Head -->
+  <ellipse cx="100" cy="88" rx="26" ry="30" fill="#fde68a"/>
+  
+  <!-- Sleek Dark Hair -->
+  <path d="M72,82 C72,55 128,55 128,82 C125,60 115,52 100,52 C85,52 75,60 72,82 Z" fill="#18181b"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="88" cy="87" rx="3" ry="3.5" fill="#18181b"/>
+  <ellipse cx="112" cy="87" rx="3" ry="3.5" fill="#18181b"/>
+  <circle cx="89" cy="85.5" r="1" fill="#ffffff"/>
+  <circle cx="113" cy="85.5" r="1" fill="#ffffff"/>
+  
+  <!-- Eyebrows -->
+  <path d="M83,81 C86,78 93,79 94,82" fill="none" stroke="#18181b" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M106,82 C107,79 114,78 117,81" fill="none" stroke="#18181b" stroke-width="1.8" stroke-linecap="round"/>
+  
+  <!-- Nose -->
+  <path d="M100,87 L98,95 L102,95" fill="none" stroke="#d97706" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  
+  <!-- Smile -->
+  <path d="M92,103 C96,107 104,107 108,103" fill="none" stroke="#be123c" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Medical ID Badge -->
+  <rect x="65" y="160" width="16" height="22" rx="2" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1"/>
+  <rect x="68" y="163" width="10" height="7" fill="#c026d3"/>
+  <line x1="68" y1="174" x2="78" y2="174" stroke="#94a3b8" stroke-width="1.5"/>
+</svg>
